@@ -2,20 +2,111 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+
+@font-face {
+  font-family: 'Dillian';
+  src: url('../assets/fonts/dillan-extrabold.otf') format('opentype');
+  font-weight: 800;
+  font-style: normal;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.dillian-font {
+  font-family: 'Dillian', sans-serif;
+  font-weight: 800;
+}
+
+.inter-unique {
+  font-family: 'Inter', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
+}
+
+html {
+  box-sizing: border-box;
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin: 0;
+  font-family: 'Inter';
+  font-weight: 500;
+  background-color: #ffffff;
+  /* overflow-x: hidden; */
+}
+
+img {
+  max-width: 100%;
+  /* height: auto; */
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 30px;
+  padding-left: 30px;
+}
+
+.moveArrow {
+  animation: smoothMove 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes smoothMove {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(20px);
+  }
+}
+
+.moveArrow1 {
+  animation: smoothMove1 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes smoothMove1 {
+  from {
+    transform: translateY(20px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.waveMove {
+  animation: waveSlide 6s ease-in-out infinite alternate;
+}
+
+@keyframes waveSlide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-30px);
+  }
 }
