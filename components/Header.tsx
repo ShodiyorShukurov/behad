@@ -8,6 +8,7 @@ import instagram from '@/assets/logo/instagram.svg';
 import telegram from '@/assets/logo/telegram.svg';
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import Link from 'next/link';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -16,18 +17,17 @@ const Header = () => {
     <header className="fixed top-[31px] w-full z-50">
       <div className="container">
         <div className="flex justify-between items-center">
-       <a
-  style={{
-    boxShadow: "0px 8px 24px 0px #00000029",
-    backgroundColor: "transparent"
-  }}
-  className="flex items-center gap-1 text-[32px] dillian-font leading-none"
-  href="/"
->
-  <Image src={logo} alt="Behad" width={32} height={32} />
-  Behad
-</a>
-
+          <Link
+            style={{
+              boxShadow: '0px 8px 24px 0px #00000029',
+              backgroundColor: 'transparent',
+            }}
+            className="flex items-center gap-1 text-[32px] dillian-font leading-none"
+            href="/"
+          >
+            <Image src={logo} alt="Behad" width={32} height={32} />
+            Behad
+          </Link>
 
           <nav
             style={{
@@ -35,10 +35,10 @@ const Header = () => {
             }}
             className="hidden md:flex bg-[#F2F9FD0A] backdrop-blur-[323px] px-[32px] h-[52px] rounded-[32px]  gap-6 items-center text-[18px] font-medium leading-[100%] tracking-0"
           >
-            <a href="#Services">Services</a>
-            <a href="#Services">Projects</a>
-            <a href="#Services">Team</a>
-            <a href="#Services">Contact</a>
+            <Link href="#Services">Services</Link>
+            <Link href="#Services">Projects</Link>
+            <Link href="#Services">Team</Link>
+            <Link href="#Services">Contact</Link>
           </nav>
 
           <button
@@ -99,12 +99,12 @@ const Header = () => {
             </ul>
 
             <div className="flex justify-center items-center gap-4 mt-[64px]">
-              <a href="">
+              <Link href="#">
                 <Image src={instagram} alt="Instagram" width={32} height={32} />
-              </a>
-              <a href="">
+              </Link>
+              <Link href="#">
                 <Image src={telegram} alt="Telegram" width={32} height={32} />
-              </a>
+              </Link>
             </div>
           </motion.nav>
         )}
