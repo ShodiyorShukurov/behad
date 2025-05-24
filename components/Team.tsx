@@ -17,7 +17,7 @@ const Team = () => {
         <h2 className="text-[48px] text-center text-white font-bold">Team</h2>
         <p className="text-[18px] text-center text-[#E1E1E1] mt-2">Our team is best</p>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 mt-[25px] gap-y-[30px] justify-center items-center">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 mt-[25px] gap-y-[30px] justify-center items-center">
           {teamMembers.map((member, index) => (
             <TeamCard key={index} index={index} member={member} />
           ))}
