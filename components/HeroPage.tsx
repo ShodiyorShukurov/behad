@@ -5,6 +5,7 @@ import calm from '@/assets/logo/calm.svg';
 import granit from '@/assets/logo/granit.svg';
 import down from '@/assets/logo/down.svg';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const HeroPage = () => {
   return (
@@ -56,7 +57,12 @@ const HeroPage = () => {
         />
       </div>
 
-      <Image className="block sm:hidden absolute bottom-20 moveArrow1 cursor-pointer" src={down} alt="downButton" />
+      <Link
+        href="#team"
+        className="block sm:hidden absolute bottom-20 moveArrow1 cursor-pointer"
+      >
+        <Image src={down} alt="downButton" />
+      </Link>
     </section>
   );
 };

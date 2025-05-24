@@ -74,7 +74,7 @@ const TeamCard = ({ member, index }: { member: Member; index: number }) => {
       </motion.div>
 
       <motion.div
-        className="text-center"
+        className="text-center sm:text-left"
         initial={{ opacity: 0, y: 20 }}
         animate={textControls}
       >

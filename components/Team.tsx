@@ -12,10 +12,10 @@ const Team = () => {
   });
 
   return (
-    <section className="pt-[48px] pb-[70px] bg-[#1B1F48]">
+    <section className="pt-[48px] pb-[48px] sm:pb-[70px] bg-[#1B1F48]" id='team'>
       <div className="container">
-        <h2 className="text-[48px] text-center text-white font-bold">Team</h2>
-        <p className="text-[18px] text-center text-[#E1E1E1] mt-2">Our team is best</p>
+        <h2 className="text-[24px] sm:text-[48px] text-center text-white font-bold leading-[120%]">Team</h2>
+        <p className="text-[16px] sm:text-[18px] text-center text-[#E1E1E1] mt-1 sm:mt-2">Our team is best</p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 mt-[25px] gap-y-[30px] justify-center items-center">
           {teamMembers.map((member, index) => (

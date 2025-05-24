@@ -1,3 +1,4 @@
+import Footer from '@/components/Footer';
 import Header from '@/components/Header';
 import HeroPage from '@/components/HeroPage';
 import Team from '@/components/Team';
@@ -11,6 +12,8 @@ export default function Home() {
 
         <Team />
       </main>
+
+      <Footer/>
     </>
   );
 }
