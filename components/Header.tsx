@@ -18,11 +18,7 @@ const Header = () => {
       <div className="container">
         <div className="flex justify-between items-center">
           <Link
-            style={{
-              boxShadow: '0px 8px 24px 0px #00000029',
-              backgroundColor: 'transparent',
-            }}
-            className="flex items-center gap-1 text-[32px] dillian-font leading-none"
+            className="flex items-center gap-1 text-[32px] dillian-font leading-none rounded-[4px]"
             href="/"
           >
             <Image src={logo} alt="Behad" width={32} height={32} />
@@ -72,15 +68,13 @@ const Header = () => {
             className="bg-[#F2F9FD7A] fixed backdrop-blur-[32px] w-full top-0 h-full z-50 container pt-[32px]"
           >
             <div className="flex justify-between items-center">
-              <Image
-                style={{
-                  boxShadow: '0px 8px 24px 0px #00000029',
-                }}
-                src={logo}
-                alt="Behad"
-                width={131}
-                height={32}
-              />
+              <Link
+                className="flex items-center gap-1 text-[32px] dillian-font leading-none rounded-[4px]"
+                href="/"
+              >
+                <Image src={logo} alt="Behad" width={32} height={32} />
+                Behad
+              </Link>
               <button
                 style={{
                   boxShadow: '0px 8px 24px 0px #62C8F529',

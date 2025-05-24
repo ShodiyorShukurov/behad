@@ -56,7 +56,7 @@ const HeroPage = () => {
         />
       </div>
 
-      <Image className=" block sm:hidden absolute bottom-20 moveArrow1" src={down} alt="downButton" />
+      <Image className="block sm:hidden absolute bottom-20 moveArrow1 cursor-pointer" src={down} alt="downButton" />
     </section>
   );
 };
