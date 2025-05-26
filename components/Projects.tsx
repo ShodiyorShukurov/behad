@@ -10,7 +10,7 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
 
-import { ReactLenis, useLenis } from 'lenis/react';
+import { ReactLenis } from 'lenis/react';
 
 const Projects = () => {
   const container = useRef<HTMLDivElement>(null);
