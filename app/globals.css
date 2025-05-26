@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 @font-face {
   font-family: 'Dillian';
   src: url('../assets/fonts/dillan-extrabold.otf') format('opentype');
@@ -32,22 +31,26 @@ html {
 *::before,
 *::after {
   box-sizing: inherit;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  margin: 0;
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* height: 100%; */
+
   font-family: 'Inter';
   font-weight: 500;
-  background-color: #ffffff;
+  /* background-color: #ffffff; */
   /* overflow-x: hidden; */
 }
 
 img {
-  max-width: 100%;
-  /* height: auto; */
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .visually-hidden {
@@ -108,5 +111,56 @@ img {
   }
   to {
     transform: translateX(-30px);
+  }
+}
+
+.projects-section {
+  position: relative;
+  height: 100svh;
+  overflow: hidden;
+  margin-bottom: 2em;
+}
+
+.intro,
+.outro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sticky-cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+.cards-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.5em;
+  overflow: hidden;
+}
+
+.card {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 80px;
+  overflow: hidden;
+}
+
+@media (max-width: 1000px) {
+  h1 {
+    font-size: 7vw;
+    text-indent: 2em;
+  }
+
+  .cards-container {
+    width: 95%;
   }
 }
