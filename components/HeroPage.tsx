@@ -58,7 +58,7 @@ const HeroPage = () => {
       </div>
 
       <Link
-        href="#team"
+        href="#projects"
         className="block sm:hidden absolute bottom-20 moveArrow1 cursor-pointer"
       >
         <Image src={down} alt="downButton" />

@@ -85,7 +85,7 @@ const Projects = () => {
 
   return (
     <ReactLenis root>
-      <div className="container" ref={container}>
+      <div className="container" ref={container} id='projects'>
         <section className="sticky-cards projects-section">
           <div className="cards-container">
             <div className="card bg-[#E1EEFF]">
