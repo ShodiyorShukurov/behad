@@ -5,8 +5,7 @@ import Image from 'next/image';
 import femmy from '../assets/logo/femmy.svg';
 import femmy_img from '../assets/femmy_img.png';
 import medagent from '../assets/logo/med.svg';
-import img from '@/assets/photo.jpg';
-import { use, useRef } from 'react';
+import {useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
@@ -14,106 +13,6 @@ import { useGSAP } from '@gsap/react';
 import { ReactLenis, useLenis } from 'lenis/react';
 
 const Projects = () => {
-  // return (
-  //   <div className="relative">
-  //     <div
-  //       className={`sticky top-[32px] h-screen flex flex-col items-center justify-center bg-[#FFE3E8] rounded-t-[80px]`}
-  //     >
-  // <div className="flex justify-center gap-[64px]">
-  //   <div className="flex flex-col justify-between">
-  //     <div>
-  //       <h2 className="flex items-center text-[48px] font-bold gap-2 text-[#000000] mb-[16px]">
-  //         <Image className="w-[48px] h-[48px]" src={femmy} alt="" /> Femmy
-  //       </h2>
-  //       <div className="text-[#595959] text-[18px] leading-[160%] font-normal">
-  //         <p>App for monitoring pregnancy and ovulation for women</p>
-  //         <p>First idea investment of $25,000</p>
-  //         <p>Project estimate: $600,000</p>
-  //         <p>Startup Garage, AloqaVentures, Angels Club</p>
-  //       </div>
-  //     </div>
-
-  //     <ul className="flex items-center justify-between">
-  //       <li>
-  //         <h4 className="text-[14px] leading-[140%] text-[#595959] font-normal">
-  //           Live App
-  //         </h4>
-  //         <h3 className="text-[18px] leading-[140%] text-[#000000] font-semibold">
-  //           Femmy app
-  //         </h3>
-  //       </li>
-  //       <li>
-  //         <h4 className="text-[14px] leading-[140%] text-[#595959] font-normal">
-  //           Industry
-  //         </h4>
-  //         <h3 className="text-[18px] leading-[140%] text-[#000000] font-semibold">
-  //           Healthcare
-  //         </h3>
-  //       </li>
-  //       <li>
-  //         <h4 className="text-[14px] leading-[140%] text-[#595959] font-normal">
-  //           Published
-  //         </h4>
-  //         <h3 className="text-[18px] leading-[140%] text-[#000000] font-semibold">
-  //           2024
-  //         </h3>
-  //       </li>
-  //     </ul>
-  //   </div>
-  //   <Image className="w-[350px]" src={femmy_img} alt="" />
-  // </div>
-  //     </div>
-
-  //     <div className="sticky top-[64px] h-screen flex flex-col items-center justify-center bg-[#E1EEFF] text-white rounded-t-[80px]">
-  //       <div className="flex justify-center gap-[64px]">
-  //         <div className="flex flex-col justify-between">
-  //           <div>
-  //             <h2 className="flex items-center text-[48px] font-bold gap-2 text-[#000000] mb-[16px]">
-  //               <Image className="w-[48px] h-[48px]" src={medagent} alt="" />{' '}
-  //               MedAgent
-  //             </h2>
-  //             <div className="text-[#595959] text-[18px] leading-[160%] font-normal w-full max-w-[460px]">
-  //               <p>
-  //                 A cross-platform solution for managing and analyzing the work
-  //                 of medical representatives.
-  //               </p>
-  //             </div>
-  //           </div>
-
-  //           <ul className="flex items-center justify-between">
-  //             <li>
-  //               <h4 className="text-[14px] leading-[140%] text-[#595959] font-normal">
-  //                 Live App
-  //               </h4>
-  //               <h3 className="text-[18px] leading-[140%] text-[#000000] font-semibold">
-  //                 MedAgent app
-  //               </h3>
-  //             </li>
-  //             <li>
-  //               <h4 className="text-[14px] leading-[140%] text-[#595959] font-normal">
-  //                 Industry
-  //               </h4>
-  //               <h3 className="text-[18px] leading-[140%] text-[#000000] font-semibold">
-  //                 Healthcare
-  //               </h3>
-  //             </li>
-  //             <li>
-  //               <h4 className="text-[14px] leading-[140%] text-[#595959] font-normal">
-  //                 Published
-  //               </h4>
-  //               <h3 className="text-[18px] leading-[140%] text-[#000000] font-semibold">
-  //                 2024
-  //               </h3>
-  //             </li>
-  //           </ul>
-  //         </div>
-  //         <Image className="w-[350px]" src={femmy_img} alt="" />
-  //       </div>
-  //     </div>
-  //   </div>
-  // );
-
-  const lenis = useLenis(({ scroll }) => {});
   const container = useRef<HTMLDivElement>(null);
 
   useGSAP(
