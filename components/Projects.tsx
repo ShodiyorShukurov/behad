@@ -88,7 +88,7 @@ const Projects = () => {
       <div className="container" ref={container} id='projects'>
         <section className="sticky-cards projects-section">
           <div className="cards-container">
-            <div className="card bg-[#E1EEFF]">
+            <div className="card bg-[#E1EEFF] rounded-[48px] md:rounded-[80px]">
               <div className="flex flex-col lg:flex-row items-stretch justify-center gap-6 sm:gap-[64px] px-10 sm:p-0">
                 <div className="flex flex-col justify-between h-full flex-1">
                   <div>
@@ -146,7 +146,7 @@ const Projects = () => {
               </div>
             </div>
 
-            <div className="card bg-[#FFE3E8]">
+            <div className="card bg-[#FFE3E8] rounded-[48px] md:rounded-[80px]">
               <div className="flex flex-col lg:flex-row items-stretch justify-center gap-6 sm:gap-[64px] px-10 sm:p-0">
                 <div className="flex flex-col justify-between h-full">
                   <div>

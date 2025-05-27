@@ -48,13 +48,13 @@ const TeamCard = ({ member, index }: { member: Member; index: number }) => {
     } else {
       // Reset when out of view
       imageControls.set({ opacity: 0, y: 150 });
-      rotateControls.set({ rotate: 45, height: 300 });
+      rotateControls.set({ rotate: 24, height: 300 });
       textControls.set({ opacity: 0, y: 20 });
     }
   }, [inView]);
 
   return (
-    <motion.div
+    <motion.li
       ref={ref}
       className="text-white py-[10px] px-[19px] mx-auto"
       initial={{ opacity: 0, y: 150 }}
@@ -62,7 +62,7 @@ const TeamCard = ({ member, index }: { member: Member; index: number }) => {
     >
       <motion.div
         className="overflow-hidden"
-        initial={{ rotate: 45, height: 300 }}
+        initial={{ rotate: 24, height: 300 }}
         animate={rotateControls}
       >
         <Image
@@ -81,7 +81,7 @@ const TeamCard = ({ member, index }: { member: Member; index: number }) => {
         <h3 className="text-[20px] mt-2 mb-1">{member.name}</h3>
         <h4 className="text-[14px]">{member.role}</h4>
       </motion.div>
-    </motion.div>
+    </motion.li>
   );
 };
 
